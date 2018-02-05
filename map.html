@@ -7,8 +7,14 @@
           <style type="text/css">
             #mapDiv { width: 800px; height 500px; }
           </style>
+            
+      <!-- Map creation is here -->
+  <script type="text/javascript">
+    //Defining map as a global variable to access from //other functions
+  var map;
      
      function initMap() {
+          //Enabling new cartography and themes
       google.maps.visualRefresh = true;
       
       var mapOptions = {
