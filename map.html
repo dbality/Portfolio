@@ -4,12 +4,12 @@
         <!-- Include Google Maps JS API -->
         <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOTPwfCsfj_aOEzCidlsdLKV7_Z8tvxD8&sensor=false"></script>
-        
-          <style type="text/css">
-            #mapDiv { width: 800px; height 500px; }
-          </style>
-            
-       <!-- Map creation is here -->
+
+	<style type="text/css">
+    #mapDiv { width: 800px; height: 500px; }
+</style>
+
+<!-- Map creation is here -->
   <script type="text/javascript">
     //Defining map as a global variable to access from //other functions
   var map;
@@ -30,7 +30,7 @@
     //Creating a map with DOM element which is just //obtained
     map = new google.maps.Map(mapElement, mapOptions);
   }
-       google.maps.event.addDomListener(window, 'load', initMap);
+        google.maps.event.addDomListener(window, 'load', initMap);
     </script>
   </head>
   <body>
