@@ -117,15 +117,6 @@ function disableScroll () {
 		<input id="btnChangeUI" type="button" value="Change UI">
 		<input id="btnDisableScroll" type="button" value="Disable Scroll Zoom">
 	
-	if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-        var lat = position.coords.latitude;
-        var lng = position.coords.longitude;
-        //Creating LatLng object with latitude and //longitude.
-        var devCenter =  new google.maps.LatLng(lat, lng);
-        map.setCenter(devCenter);
-        map.setZoom(15);
-    });
-}
+	
   </body>
 </html>
