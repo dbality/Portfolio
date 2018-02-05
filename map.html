@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOTPwfCsfj_aOEzCidlsdLKV7_Z8tvxD8&sensor=false"></script>
+        
+          <style type="text/css">
+            #mapDiv { width: 800px; height 500px; }
+          </style>
+     
+     function initMap() {
+      google.maps.visualRefresh = true;
+      
+      var mapOptions = {
+          center: new google.maps.LatLng(39.9078, 32.8252),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        
+      var mapElement = document.getElementById('mapDiv');
+      
+      map = new google.maps.Map(mapElement, mapOptions);
+      }
+       google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+  </head>
+  <body>
+      <b>My First Map </b>
+      <div id="mapDiv"></div>
+  </body>
+</html>
