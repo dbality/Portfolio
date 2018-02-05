@@ -62,6 +62,7 @@ function changeUI () {
 function disableScroll () {
     map.setOptions ({ scrollwheel: false });
 }
+	  startButtonEvents();
 
 	function startButtonEvents () {
     document.getElementById('btnZoomToIst' ).addEventListener('click', function(){
@@ -86,7 +87,7 @@ function disableScroll () {
         disableScroll();
     });
 }
-	startButtonEvents();
+	
 	  
         google.maps.event.addDomListener(window, 'load', initMap);
     </script>
