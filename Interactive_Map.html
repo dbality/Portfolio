@@ -33,7 +33,6 @@
     //Creating a map with DOM element which is just //obtained
     map = new google.maps.Map(mapElement, mapOptions);
   }
-	  startButtonEvents();
 	  
    function zoomToIstanbul () {
     var istanbul = new google.maps.LatLng(41.0579,29.0340);
@@ -63,7 +62,7 @@ function changeUI () {
 function disableScroll () {
     map.setOptions ({ scrollwheel: false });
 }
-
+startButtonEvents();
 	function startButtonEvents () {
     document.getElementById('btnZoomToIst' ).addEventListener('click', function(){
         zoomToIstanbul();
