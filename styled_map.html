@@ -5,11 +5,11 @@
         <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOTPwfCsfj_aOEzCidlsdLKV7_Z8tvxD8&sensor=false"></script>
 
-	<style type="text/css">
-    		html { height: 100% }
-		body { height: 100%; margin: 0; }
-		#mapDiv { width: 100%; height: 100%; }
-	</style>
+<style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0; }
+    #mapDiv { width: 100%; height: 100%; }
+</style>
 
 <!-- Map creation is here -->
   <script type="text/javascript">
@@ -20,14 +20,13 @@
     google.maps.visualRefresh = true;
 	  
     //Setting starting options of map
+	  
     var mapOptions = {
       center: new google.maps.LatLng(39.9078, 32.8252),
       zoom: 10,
        mapTypeControlOptions: {mapTypeIds: 
         [google.maps.MapTypeId.ROADMAP, 'new_bluish_style']}
-    };
-
-      
+    };      
 	  
     //Getting map DOM element
     var mapElement = document.getElementById('mapDiv');
@@ -85,7 +84,7 @@
 ]
 var bluishStyledMap = new google.maps.StyledMapType(bluishStyle,
     {name: "Bluish Google Base Maps with Pink Highways"});
-	  };
+	  
 	  
 map.setMapTypeId('new_bluish_style');
 	  
@@ -97,7 +96,7 @@ map.setMapTypeId('new_bluish_style');
     </script>
   </head>
   <body>
-      <b>My First Styled Map recorded edit 4 </b>
+      <b>My First Styled Map recorded edit 5 </b>
       <div id="mapDiv"></div>
   </body>
 </html>
