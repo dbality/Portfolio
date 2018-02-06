@@ -18,9 +18,6 @@
   function initMap() {
     //Enabling new cartography and themes
     google.maps.visualRefresh = true;
-   
-   var bluishStyledMap = new google.maps.StyledMapType(bluishStyle,
-    {name: "Bluish Google Base Maps with Pink Highways"});
     
    var bluishStyle = [
     {
@@ -70,6 +67,8 @@
         ]
     }
 ]
+	var bluishStyledMap = new google.maps.StyledMapType(bluishStyle,
+    {name: "Bluish Google Base Maps with Pink Highways"});
 
     //Setting starting options of map
     var mapOptions = {
