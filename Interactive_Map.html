@@ -19,6 +19,8 @@
   function initMap() {
     //Enabling new cartography and themes
     google.maps.visualRefresh = true;
+	  
+	  startButtonEvents();
 
     //Setting starting options of map
     var mapOptions = {
@@ -62,7 +64,7 @@ function changeUI () {
 function disableScroll () {
     map.setOptions ({ scrollwheel: false });
 }
-startButtonEvents();
+
 	function startButtonEvents () {
     document.getElementById('btnZoomToIst' ).addEventListener('click', function(){
         zoomToIstanbul();
