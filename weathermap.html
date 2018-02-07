@@ -35,10 +35,11 @@
        temperatureUnits: 
        google.maps.weather.TemperatureUnit.CELCIUS
     });
- 	weatherLayer.setMap(map);
+ 
 	
 	var cloudLayer = new google.maps.weather.CloudLayer();
 
+	weatherLayer.setMap(map);
 	cloudLayer.setMap(map);
 	
  }
@@ -47,7 +48,7 @@
     </script>
   </head>
   <body>
-      <b>My First Weather Map 1</b>
+      <b>My First Weather Map 2</b>
       <div id="mapDiv"></div>
   </body>
 </html>
