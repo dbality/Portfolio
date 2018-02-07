@@ -42,11 +42,15 @@
     		 maxZoom: 18
 	  });
 
+	map.mapTypes.set('OSM', osmMapType);
+
+	map.setMapTypeId('OSM');
+
         google.maps.event.addDomListener(window, 'load', initMap);
     </script>
   </head>
   <body>
-      <b>My First Tiled Map 2 </b>
+      <b>My First Tiled Map 3 </b>
       <div id="mapDiv"></div>
   </body>
 </html>
