@@ -16,12 +16,12 @@
  		 function initMap() {
    			 //Enabling new cartography and themes
    			 google.maps.visualRefresh = true;
+
    			 //Setting starting options of map
     	var mapOptions = {
      		 center: new google.maps.LatLng(39.9078, 32.8252),
      		 zoom: 10,
-      		 {mapTypeIds: [google.maps.MapTypeId.ROADMAP,  
-    								'OSM']}
+      		 mapTypeId: google.maps.MapTypeId.ROADMAP
   	  };
 
     			//Getting map DOM element
@@ -29,30 +29,23 @@
 
     			//Creating a map with DOM element which is just //obtained
     		 map = new google.maps.Map(mapElement, mapOptions);
- 		 },
-
+ 		 }
 
 	var osmMapType = new google.maps.ImageMapType({
-    		getTileUrl: function(coord, zoom) {
-       			 return "http://tile.openstreetmap.org/" + zoom + 
-        		 "/" + coord.x + "/" + coord.y + ".png";
-    		},
-    			tileSize: new google.maps.Size(256, 256),
-    			name: "OpenStreetMap",
-    			maxZoom: 18
-		});
-
-   			 
- 		 
-	map.mapTypes.set('OSM', osmMapType);
-	
-	map.setMapTypeId('OSM');
+   		 getTileUrl: function(coord, zoom) {
+       		 return "http://tile.openstreetmap.org/" + zoom + 
+        	 "/" + coord.x + "/" + coord.y + ".png";
+   		 },
+   		 tileSize: new google.maps.Size(256, 256),
+    		 name: "OpenStreetMap",
+    		 maxZoom: 18
+	  });
 
         google.maps.event.addDomListener(window, 'load', initMap);
     </script>
   </head>
   <body>
-      <b>My First tiled Map edit 3 </b>
+      <b>My First Tiled Map 1 </b>
       <div id="mapDiv"></div>
   </body>
 </html>
