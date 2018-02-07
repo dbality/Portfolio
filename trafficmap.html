@@ -31,8 +31,9 @@
     		 map = new google.maps.Map(mapElement, mapOptions);
 
 	var trafficLayer = new google.maps.TrafficLayer();
- 		 }
-	trafficLayer.setMap(map);
+
+ 	trafficLayer.setMap(map);	
+ }
 
         google.maps.event.addDomListener(window, 'load', initMap);
     </script>
