@@ -30,14 +30,14 @@
     			//Creating a map with DOM element which is just //obtained
     		 map = new google.maps.Map(mapElement, mapOptions);
 
-	var weatherLayer = new google.maps.weather.WeatherLayer
+	var weatherLayer = new google.maps.weather.weatherLayer
     ({
        temperatureUnits: 
        google.maps.weather.TemperatureUnit.CELCIUS
     });
  
 	
-	var cloudLayer = new google.maps.weather.CloudLayer();
+	var cloudLayer = new google.maps.weather.cloudLayer();
 
 	weatherLayer.setMap(map);
 	cloudLayer.setMap(map);
@@ -48,7 +48,7 @@
     </script>
   </head>
   <body>
-      <b>My First Weather Map 2</b>
+      <b>My First Weather Map 3</b>
       <div id="mapDiv"></div>
   </body>
 </html>
