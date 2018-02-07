@@ -21,7 +21,8 @@
     	var mapOptions = {
      		 center: new google.maps.LatLng(39.9078, 32.8252),
      		 zoom: 10,
-      		 mapTypeId: google.maps.MapTypeId.ROADMAP
+      		 {mapTypeIds: [google.maps.MapTypeId.ROADMAP,  
+    'OSM']}
   	  };
 
     			//Getting map DOM element
@@ -45,7 +46,7 @@
     </script>
   </head>
   <body>
-      <b>My First Tiled Map 1 </b>
+      <b>My First Tiled Map 2 </b>
       <div id="mapDiv"></div>
   </body>
 </html>
