@@ -31,7 +31,7 @@
 		
 		<script type="text/javascript">
 			var map;
-				function initialize() {
+				function initMap() {
 				var Norway = new google.maps.LatLng(60.4720, 8.4689)
 				var mapOptions = {
 						zoom: 10,
@@ -42,12 +42,12 @@
 				
 				map = new google.maps.Map(mapElement, mapOptions);
 				}
-			google.maps.event.addDomListener(window, 'load', initialize);
+			google.maps.event.addDomListener(window, 'load', initMap);
 		</script>
 	</head>
 	
 	<body>
-		<h1> MileStone 3.1.1</h1>
+		<h1> MileStone 3.1.2</h1>
 		<div id="map_canvas"></div>
 		
 	
