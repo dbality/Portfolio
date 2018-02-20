@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyBOTPwfCsfj_aOEzCidlsdLKV7_Z8tvxD8">
+		</script>
+		
+		<style type="text/css">
+			
+			html {
+				height: 100%}
+				
+			body {
+				height: 100%;
+				margin: 10px;
+				padding:10px;
+				background-color: black;
+				color: #CCCCCC;
+				text-align: center}
+				
+			.infobox {
+				color: black }
+				
+			#map_canvas {
+				width: 90%
+				height: 80%;
+				margin-left: auto;
+				margin-right: auto}
+		</style>
+		
+		<script type="text/javascript">
+			var map;
+				function initialize() {
+				var Norway = new google.maps.LatLng(60.4720, 8.4689)
+				var mapOptions = {
+						zoom: 10,
+						center: Norway,
+						mapTypeId: google.maps.MapTypeId.HYBRID
+					};
+				var mapElement = document.getElementById("map_canvas");
+				
+				map = new google.maps.Map(mapElement, mapOptions);
+				}
+		</script>
+	</head>
+	
+	<body>
+		<h1> MileStone 3.1</h1>
+		<div id="map_canvas"></div>
+		
+	
+	</body>
+</html>
