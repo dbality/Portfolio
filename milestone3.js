@@ -11,4 +11,4 @@ function initialize () {
 	map = new google.maps.Map(mapElement, mapOptions);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//<!--google.maps.event.addDomListener(window, 'load', initialize);-->
