@@ -46,15 +46,15 @@
 			map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
 			
 			var styleSelector = document.getElementById('style-selector');
-			map.setOptions({styles: styles[styleSelector.value]});
+			map.setOptions({styles: styles[styleSelector.Dark]});
 			
 			styleSelector.addEventListener('change', function() {
-			map.setOptions({styles: styles[styleSelector.value]});
+			map.setOptions({styles: styles[styleSelector.default]});
 			});
 				}
 			
 			var styles ={
-			
+			default: null,
 		Dark: [
   {
     "elementType": "geometry",
@@ -276,7 +276,7 @@
 	</head>
 	
 	<body>
-		<h1> MileStone 4.2.5</h1>
+		<h1> MileStone 4.2.6</h1>
 		<div id="map_canvas"></div>
 		
 	
