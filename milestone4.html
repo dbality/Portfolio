@@ -44,7 +44,22 @@
 				}
 			google.maps.event.addDomListener(window, 'load', initMap);
 			
-			[
+			// Add a style-selector control to the map.
+var styleControl = document.getElementById('style-selector-control');
+map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
+
+// Set the map's style to the initial value of the selector.
+var styleSelector = document.getElementById('style-selector');
+map.setOptions({styles: styles[styleSelector.value]});
+
+// Apply new JSON when the user selects a different style.
+styleSelector.addEventListener('change', function() {
+map.setOptions({styles: styles[styleSelector.value]});
+});
+
+		var styles = {	
+		default: null
+			night[
   {
     "elementType": "geometry",
     "stylers": [
@@ -313,7 +328,7 @@
 	</head>
 	
 	<body>
-		<h1> MileStone 4.0.1</h1>
+		<h1> MileStone 4.0.2</h1>
 		<div id="map_canvas"></div>
 		
 	
