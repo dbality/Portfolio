@@ -7,7 +7,7 @@ function initialize () {
 		center: Norway,
 		mapTypeId: google.maps.MapTypeId.HYBRID,
 
-Dark: [
+style: [
   {
     "elementType": "geometry",
     "stylers": [
