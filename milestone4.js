@@ -5,7 +5,7 @@ function initialize () {
 	var mapOptions = {
 		zoom: 10,
 		center: Norway,
-		mapTypeId: google.maps.MapTypeId.HYBRID,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
 
 style: [
   {
