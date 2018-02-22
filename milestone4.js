@@ -79,24 +79,7 @@ style: [
     "featureType": "landscape.man_made",
     "stylers": [
       {
-        "color": "#a802bf"
-      },
-      {
-        "saturation": -20
-      },
-      {
-        "lightness": -5
-      }
-    ]
-  },
-  {
-    "featureType": "landscape.natural",
-    "stylers": [
-      {
-        "color": "#03cf12"
-      },
-      {
-        "lightness": -35
+        "color": "#ffeb3b"
       }
     ]
   },
@@ -217,7 +200,7 @@ style: [
       }
     ]
   }
- ]
+]
  };
 		var mapElement = document.getElementById('map_canvas');
 	map = new google.maps.Map(mapElement, mapOptions);
