@@ -267,7 +267,7 @@ function initialize () {
       }
     ]
   }
-
+]
  
  };
 		var mapElement = document.getElementById('map_canvas');
