@@ -24,7 +24,7 @@ function initialize () {
 		mapTypeId: google.maps.MapTypeId.HYBRID
 	};
 	
-	var churchinfo = '<div class="infobox"> +
+	var churchinfo = '<div class="infobox">' +
 		'<p>Burned down by Varg Vikernes of Burzum. Used as album cover on EP Aske.</p>' +
 		'</div>'
 	
