@@ -21,7 +21,7 @@ function initialize () {
 	var mapOptions = {
 		zoom: 6,
 		center: Norway,
-		mapTypeId: google.maps.MapTypeId.SATELLITE
+		mapTypeId: google.maps.MapTypeId.HYBRID
 	};
 	var mapElement = document.getElementById('map_canvas');
 	map = new google.maps.Map(mapElement, mapOptions);
