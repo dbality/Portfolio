@@ -16,25 +16,24 @@ function initialize () {
 		position: Fantoft,
 		title: "Fantoft Stave Church"
 		});
-	//burntchurch1.setMap(map);
 	
 	var burntchurch2 = new google.maps.Marker({
 		position: Holmenkollen,
 		title: "Holmenkollen Chapel"
 		});
-	//burntchurch2.setMap(map);
+	
 	var hometown1 = new google.maps.Marker({
-		position: Notodden
+		position: Notodden,
 		title: "Notodden, Emperor's Birth Place"
 	});
 	
 	var hometown2 = new google.maps.Marker({
-		position: Bergen
+		position: Bergen,
 		title: "Bergen, Burzum's Birth Place"
 	});
 	
 	var hometown3 = new google.maps.Marker({
-		position: Olso
+		position: Olso,
 		title: "Olso, Mayhem's Birth Place"
 	});
 	
