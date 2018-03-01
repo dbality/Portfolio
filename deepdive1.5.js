@@ -10,7 +10,7 @@ function initialize () {
 		position: Fantoft,
 		title: "Fantoft Stave Church"
 		});
-	burntchurch1.setMap(map);
+	//burntchurch1.setMap(map);
 	
 	var burntchurch2 = new google.maps.Marker({
 		position: Holmenkollen,
@@ -37,4 +37,6 @@ function initialize () {
 		});
 	var mapElement = document.getElementById('map_canvas');
 	map = new google.maps.Map(mapElement, mapOptions);
+	
+	burntchurch1.setMap(map);
 }
