@@ -45,6 +45,11 @@ function initialize () {
 	google.maps.event.addListener(burntchurch1, 'click', function() {
 		churchwindow.open(map, burntchurch1);
 		});
+	
+	google.maps.event.addListener(burntchurch2, 'click', function() {
+		chapelwindow.open(map, burntchurch2);
+		});
+	
 	var mapElement = document.getElementById('map_canvas');
 	map = new google.maps.Map(mapElement, mapOptions);
 	
