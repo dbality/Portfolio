@@ -16,7 +16,7 @@ function initialize () {
 		position: Holmenkollen,
 		title: "Holmenkollen Chapel"
 		});
-	burntchurch2.setMap(map);
+	//burntchurch2.setMap(map);
 	
 	var mapOptions = {
 		zoom: 7,
@@ -31,6 +31,16 @@ function initialize () {
 	var churchwindow = new google.maps.InfoWindow({
 		content: churchinfo
 		});
+		
+	var chapelinfo = '<div class="infobox">' +
+		'<p>Burned down by Varg Vikernes (Burzum), Faust (Emperor), and Euronymous (Mayhem).</p>' +
+	    	'<p>Euronymous was killed my Varg before being tried. Varg was not found guilty by Jury.</p>' +
+	    	'<p>The Judges thought this was a mistake, but did not dismiss the entire trial because of.</p>' +
+		'</div>'
+	
+	var chapelwindow = new google.maps.InfoWindow({
+		content: chapelinfo
+		});
 	
 	google.maps.event.addListener(burntchurch1, 'click', function() {
 		churchwindow.open(map, burntchurch1);
@@ -39,4 +49,5 @@ function initialize () {
 	map = new google.maps.Map(mapElement, mapOptions);
 	
 	burntchurch1.setMap(map);
+	burntchurch2.setMap(map);
 }
