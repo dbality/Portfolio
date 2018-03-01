@@ -34,7 +34,7 @@ function initialize () {
 		
 	var chapelinfo = '<div class="infobox">' +
 		'<p>Burned down by Varg Vikernes (Burzum), Faust (Emperor), and Euronymous (Mayhem).</p>' +
-	    	'<p>Euronymous was killed my Varg before being tried. Varg was not found guilty by Jury.</p>' +
+	    	'<p>Euronymous was killed by Varg before being tried. Varg was found not-guilty by Jury.</p>' +
 	    	'<p>The Judges thought this was a mistake, but did not dismiss the entire trial because of.</p>' +
 		'</div>'
 	
