@@ -16,7 +16,8 @@ function initialize () {
 	};
 	
 	var MidMarkInfo = '<div class="infobox">' +
-		'<p>Burned down by Varg Vikernes of Burzum. Used as album cover on EP Aske.</p>' +
+		'<p>Stonehenge is the spot where the aliens landed so that they could make repairs</p>' +
+	    	'<p>to their spaceship before continuing on their journey to some place not Earth!</p>' +
 		'</div>'
 		
 	
