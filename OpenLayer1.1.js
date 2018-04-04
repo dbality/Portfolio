@@ -1,4 +1,4 @@
-// OpenLayers_01.js
+// OpenLayer1.1.js
 
  var myMap = new ol.Map({
  target: 'map',
