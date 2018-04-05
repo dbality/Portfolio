@@ -1,6 +1,6 @@
 // OpenLayer1.1.js
 
-var myMap = new.ol.Map({
+var myMap = new ol.Map({
 	target: 'map',
 	layers: [
 		new ol.layer.Tile({
