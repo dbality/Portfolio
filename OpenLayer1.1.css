@@ -4,9 +4,9 @@ body {
  height:100%
  }
 
-#map {
- width:600px;
+.map {
  height:400px;
+ width:600px;
  }
 
  #map_selector li {
@@ -20,8 +20,4 @@ body {
 
 
 
- #map div.ol-viewport div.ol-overlaycontainer-stopevent
- div.ol-overviewmap.ol-unselectable.ol-control.ol-uncollapsible {
- top: 200px;
- bottom: 300px;
- }
+
