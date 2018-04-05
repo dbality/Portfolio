@@ -18,6 +18,8 @@ body {
  background-color: black;
  }
 
-
-
-
+#map div.ol-viewport div.ol-overlaycontainer-stopevent
+div.ol-overviewmap.ol-unselectable.ol-control.ol-uncollapsible {
+   top: 200px;
+   bottom: 300px;
+}
