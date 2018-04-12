@@ -8,14 +8,14 @@
 </head>
 
 <body>
-	<h1>Milestone 9.0.2</h1>
+	<h1>Milestone 9.0.3</h1>
 
 	<div id="map" class="map"><!-- This is where the map will be displayed --></div>
 
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
 	
-		var WMSmap = new ol.layer.TileWMS({
+		var WMSmap = new ol.layer.Tile({
 			source: new ol.source.TileWMS({
 			url: 'http://gstore.unm.edu/apps/rgis/datasets/715663ba-c1c3-414c-84a7-c671526f8316/services/ogc/wms?',
 				params: {
