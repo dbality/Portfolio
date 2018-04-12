@@ -8,12 +8,46 @@
 </head>
 
 <body>
-	<h1>Milestone 9.0.3</h1>
+	<h1>Milestone 9.1.0</h1>
 
 	<div id="map" class="map"><!-- This is where the map will be displayed --></div>
 
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
+	
+	      var style = new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: 'rgba(255, 255, 255, 0.6)'
+        }),
+        stroke: new ol.style.Stroke({
+          color: '#319FD3',
+          width: 1
+        }),
+        text: new ol.style.Text({
+          font: '12px Calibri,sans-serif',
+          fill: new ol.style.Fill({
+            color: '#000'
+          }),
+          stroke: new ol.style.Stroke({
+            color: '#fff',
+            width: 3
+          })
+        })
+      });
+
+      var vectorLayer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+          url: 'https://openlayers.org/en/v4.6.5/examples/data/geojson/countries.geojson',
+          format: new ol.format.GeoJSON()
+        }),
+        style: function(feature) {
+          style.getText().setText(feature.get('name'));
+          return style;
+        }
+      });
+
+	  
+	  
 		var myMap = new ol.Map({
 	target: 'map',
 	layers: [
