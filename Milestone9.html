@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Milestone 9.0.4</h1>
+	<h1>Milestone 9.0.5</h1>
 
 	<div id="map" class="map"><!-- This is where the map will be displayed --></div>
 
@@ -19,7 +19,7 @@
 			source: new ol.source.TileWMS({
 			url: 'http://gstore.unm.edu/apps/rgis/datasets/715663ba-c1c3-414c-84a7-c671526f8316/services/ogc/wms?',
 				params: {
-					LAYERS: 'tl_2010_35_bg10',
+					LAYERS: [WMSmap], //'tl_2010_35_bg10',
 					FORMAT: 'image/png',
 					TRANSPARENT: true
 				},
