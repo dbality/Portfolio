@@ -8,9 +8,9 @@
 </head>
 
 <body>
-	<h1>Milestone 9.0.6</h1>
+	<h1>Milestone 9.0.7</h1>
 
-	<div id="map" class="map"><!-- This is where the map will be displayed --></div>
+	<div id="map1" class="map"><!-- This is where the map will be displayed --></div>
 
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
@@ -27,7 +27,7 @@
 		})
 		
 		var testmap1 = new ol.Map({
-			target: 'map',
+			target: 'map1',
 			layers: [WMSmap], //'tl_2010_35_bg10',
 			view: new ol.View({
 				center: ol.proj.fromLonLat([-106.6504,35.0844]),
