@@ -8,9 +8,15 @@
 </head>
 
 <body>
-	<h1>Milestone 9.0.7</h1>
+	<h1>Milestone 9.1.0</h1>
+	
+	<h1>Map1</h1>
 
 	<div id="map1" class="map"><!-- This is where the map will be displayed --></div>
+	
+	<h1>Map2</h1>
+	
+	<div id="map2" class="map"><!-- This is where the map will be displayed --></div>
 
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
@@ -35,6 +41,28 @@
 				projection: 'EPSG:3857'
 				})
 			})
+		
+		var WMSmap2 = new ol.layer.Tile({
+			source: new ol.source.TileWMS({
+			url: 'http://services.azgs.az.gov/ArcGIS/services/aasggeothermal/OKWellLogs/MapServer/WMSServer?',
+				params: {
+					LAYERS: 'WellLog',
+					FORMAT: 'image/png',
+					TRANSPARENT: true
+				},
+			})
+		})
+		
+		var projectmap = new ol.Map({
+			target: 'map2',
+			layers: [WMSmap2],
+			view: new ol.View({
+				center: ol.proj.fromLonLat([-97.059,36.116]), //36.116°N 97.059°W
+				zoom: 8,
+				projection: 'EPSG:3857'
+				})
+			})
+		
 	</script> 
 </body>
 
