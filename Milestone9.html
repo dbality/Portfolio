@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Milestone 9.1.1</h1>
+	<h1>Milestone 9.1.2</h1>
 	
 	<h1>Map1</h1>
 
@@ -44,9 +44,9 @@
 		
 		var WMSmap2 = new ol.layer.Tile({
 			source: new ol.source.TileWMS({
-			url: 'http://services.azgs.az.gov/ArcGIS/services/aasggeothermal/OKWellLogs/MapServer/WMSServer?',
+			url: 'https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WmsServer?',
 				params: {
-					LAYERS: 'WellLog',
+					LAYERS: '0',
 					FORMAT: 'image/png',
 					TRANSPARENT: true
 				},
@@ -59,7 +59,7 @@
 			view: new ol.View({
 				center: ol.proj.fromLonLat([-97.059,36.116]), //36.116°N 97.059°W
 				zoom: 8,
-				projection: 'EPSG:4326'
+				projection: 'EPSG:3857'
 				})
 			})
 		
