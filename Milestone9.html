@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Milestone 9.2.0</h1>
+	<h1>Milestone 9.2.1</h1>
 	
 	<h1>Map1</h1>
 
@@ -21,6 +21,13 @@
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
 	
+		var MyStyle = new ol.style.Style({
+			stroke: new ol.style.Stroke({
+				color: [0,0,255,1],
+				width: 1
+				}),
+			});
+		
 		var WMSmap = new ol.layer.Tile({
 			source: new ol.source.TileWMS({
 			url: 'http://gstore.unm.edu/apps/rgis/datasets/715663ba-c1c3-414c-84a7-c671526f8316/services/ogc/wms?',
@@ -52,7 +59,7 @@
 			LandSat: 'Scene 16h 12v'
 		});
 		
-		LandSatScene.setStyle(<name of style>)
+		LandSatScene.setStyle(MyStyle)
 		
 		var SceneGeom = new ol.layer.Vector({
 			source: new ol.source.Vector({
