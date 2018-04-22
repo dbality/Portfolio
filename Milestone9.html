@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Milestone 9.3.9</h1>
+	<h1>Milestone 9.3.11</h1>
 	
 	<h1>WMS Map from Midterm</h1>
 
@@ -17,6 +17,9 @@
 	<h1>WMS Map with 5 Arbitrary Vector Features</h1>
 	
 	<div id="map2" class="map"><!-- This is where the map will be displayed --></div>
+	
+	<h1>This is where my KML map would be. IF I HAD ONE!!!!</h1>
+	<div id="kmlmap" class="map"><!-- This is where the map will be displayed --></div>
 
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
@@ -24,7 +27,7 @@
 		var MyStyle = new ol.style.Style({
 			stroke: new ol.style.Stroke({
 				color: [0,0,255,1],
-				width: 2
+				width: 1
 				}),
 			});
 			
@@ -185,6 +188,16 @@
 				})
 			})
 		
+		var KMLmap = new ol.Map({
+			target: 'kmlmap',
+			layers: [tobedefined],
+			view: new ol.View({
+				center: ol.proj.fromLonLat([-98.507336, 38.539556]),
+				zoom: 10
+				projection: 'EPSG:3857'
+				})
+			});
+			
 	</script> 
 </body>
 
