@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Milestone 9.2.1</h1>
+	<h1>Milestone 9.3.0</h1>
 	
 	<h1>Map1</h1>
 
@@ -24,6 +24,34 @@
 		var MyStyle = new ol.style.Style({
 			stroke: new ol.style.Stroke({
 				color: [0,0,255,1],
+				width: 1
+				}),
+			});
+			
+		var MyStyle2 = new ol.style.Style({
+			stroke: new ol.style.Stroke({
+				color: [0,66,255,1],
+				width: 2
+				}),
+			});
+			
+		var MyStyle3 = new ol.style.Style({
+			stroke: new ol.style.Stroke({
+				color: [200,0,255,1],
+				width: 1
+				}),
+			});
+			
+		var MyStyle4 = new ol.style.Style({
+			stroke: new ol.style.Stroke({
+				color: [0,255,55,1],
+				width: 1
+				}),
+			});
+			
+		var MyStyle5 = new ol.style.Style({
+			stroke: new ol.style.Stroke({
+				color: [0,255,255,1],
 				width: 1
 				}),
 			});
@@ -59,7 +87,71 @@
 			LandSat: 'Scene 16h 12v'
 		});
 		
+		var ArbPolygon4 = new ol.Feature({
+			geometry: new ol.geom.Polygon([[
+				[-98.482224,35.377908],
+				[-95.744431,35.377908],
+				[-95.744431,36.873732],
+				[-98.482224,36.873732],
+				]]).transform('EPSG:4326','EPSG:3857'),
+		});
+		
+		var ArbPolygon1 = new ol.Feature({
+			geometry: new ol.geom.Polygon([[
+				[-98.482224,35.377908],
+				[-95.744431,35.377908],
+				[-95.744431,36.873732],
+				[-98.482224,36.873732],
+				]]).transform('EPSG:4326','EPSG:3857'),
+		});
+		
+		var ArbPolygon2 = new ol.Feature({
+			geometry: new ol.geom.Polygon([[
+				[-98.482224,35.377908],
+				[-95.744431,35.377908],
+				[-95.744431,36.873732],
+				[-98.482224,36.873732],
+				]]).transform('EPSG:4326','EPSG:3857'),
+		});
+		
+		var ArbPolygon3 = new ol.Feature({
+			geometry: new ol.geom.Polygon([[
+				[-98.482224,35.377908],
+				[-95.744431,35.377908],
+				[-95.744431,36.873732],
+				[-98.482224,36.873732],
+				]]).transform('EPSG:4326','EPSG:3857'),
+		});
+		
 		LandSatScene.setStyle(MyStyle)
+		ArbPolygon2.setStyle(MyStyle5)
+		ArbPolygon4.setStyle(MyStyle2)
+		ArbPolygon3.setStyle(MyStyle3)
+		ArbPolygon1.setStyle(MyStyle4)
+		
+		var Poly1 = new ol.layer.Vector({
+			source: new ol.source.Vector({
+					features: [ArbPolygon1]
+			})
+		})
+		
+		var Poly2 = new ol.layer.Vector({
+			source: new ol.source.Vector({
+					features: [ArbPolygon2]
+			})
+		})
+		
+		var Poly3 = new ol.layer.Vector({
+			source: new ol.source.Vector({
+					features: [ArbPolygon3]
+			})
+		})
+		
+		var Poly4 = new ol.layer.Vector({
+			source: new ol.source.Vector({
+					features: [ArbPolygon4]
+			})
+		})
 		
 		var SceneGeom = new ol.layer.Vector({
 			source: new ol.source.Vector({
@@ -80,10 +172,10 @@
 		
 		var projectmap = new ol.Map({
 			target: 'map2',
-			layers: [WMSmap2,SceneGeom],
+			layers: [WMSmap2,SceneGeom,Poly1,Poly2,Poly3,Poly4],
 			view: new ol.View({
 				center: ol.proj.fromLonLat([-97.059,36.116]), //36.116°N 97.059°W
-				zoom: 8,
+				zoom: 7,
 				projection: 'EPSG:3857'
 				})
 			})
