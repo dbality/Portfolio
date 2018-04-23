@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Milestone 9.3.16</h1>
+	<h1>Milestone 9.3.17</h1>
 	
 	<h1>WMS Map from Midterm</h1>
 
@@ -191,14 +191,14 @@
 		var KMLlayer = new ol.layer.Vector({
 			source: new ol.source.Vector({
   			 url: 'https://dbality.github.io/Portfolio/MyKMLref.html',
-  			 projection: 'EPSG:4326',
+  			 projection: 'EPSG:3857',
    			 format: new ol.format.KML()
-   			 }).transform('EPSG:4326','EPSG:3857'),
+   			 })
 		})
 		
 		var KMLmap = new ol.Map({
 			target: 'kmlmap',
-			layers: [KMLlayer],
+			layers: [WMSmap2,KMLlayer],
 			view: new ol.View({
 				center: ol.proj.fromLonLat([-98.507336, 38.539556]),
 				zoom: 5,
