@@ -12,7 +12,7 @@
 	
 	<h1>NDVI from 2011 to 2013</h1>
 
-	<div id="map1" class="map"><!-- This is where the map will be displayed --></div>
+	<div id="FinalMap" class="map"><!-- This is where the map will be displayed --></div>
 	
 	<h1>NDVI from 2013 to 2014</h1>
 	
@@ -24,6 +24,28 @@
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
 	
+	var projection = ol.proj.get('EPSG:3857');
+	
+	var 100mBuff = new ol.layer.Tile({
+		source: new ol.source.TileWMS({
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
+			params: {
+				LAYERS: 'ws_dbality:Well_buffer_100m',
+				FORMAT: 'application/openlayers',
+				TRANSPARENT: true
+				},
+			})
+		})
+	
+	var Map1 = new ol.Map({
+		target: 'FinalMap',
+		layers: [100mBuff],
+		view: new ol.View({
+			center: ol.proj.from.LonLat([-97.0584, 36.1156]), 
+			zoom: 14,
+			projection: projection,
+			})
+		})
 	</script>	
 	
 </body>
