@@ -8,15 +8,15 @@
 </head>
 
 <body>
-	<h1>Final Project 1.0.3</h1>
+	<h1>Final Project 1.1.0</h1>
 	
 	<h1>NDVI from 2011 to 2013</h1>
 
 	<div id="FinalMap" class="map"><!-- This is where the map will be displayed --></div>
 	
-	<h1>NDVI from 2013 to 2014</h1>
+	<h1>NDVI</h1>
 	
-	<div id="map2" class="map"><!-- This is where the map will be displayed --></div>
+	<div id="FinalMap2" class="map"><!-- This is where the map will be displayed --></div>
 	
 	<h1>NDVI from 2011 to 2014</h1>
 	<div id="kmlmap" class="map"><!-- This is where the map will be displayed --></div>
@@ -36,10 +36,42 @@
 				},
 			})
 		})
+		
+	var KiloBuff = new ol.layer.Tile({
+		source: new ol.source.TileWMS({
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
+			params: {
+				LAYERS: 'ws_dbality:Well_buffer_1km',
+				FORMAT: 'application/openlayers',
+				TRANSPARENT: true
+				},
+			})
+		})	
+
+	var Well_Loc = new ol.layer.Tile({
+		source: new ol.source.TileWMS({
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
+			params: {
+				LAYERS: 'ws_dbality:Well_Locations',
+				FORMAT: 'application/openlayers',
+				TRANSPARENT: true
+				},
+			})
+		})
 	
 	var Map1 = new ol.Map({
 		target: 'FinalMap',
-		layers: [MeterBuff],
+		layers: [MeterBuff, KiloBuff, Well_Loc],
+		view: new ol.View({
+			center: ol.proj.fromLonLat([-97.0584, 36.1156]), 
+			zoom: 14,
+			projection: projection,
+			})
+		})
+		
+	var Map2 = new ol.Map({
+		target: 'FinalMap2',
+		layers: [MeterBuff, KiloBuff, Well_Loc],
 		view: new ol.View({
 			center: ol.proj.fromLonLat([-97.0584, 36.1156]), 
 			zoom: 14,
