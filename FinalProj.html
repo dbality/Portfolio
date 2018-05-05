@@ -8,8 +8,40 @@
 </head>
 
 <body>
-	<h1>Final Project 1.4.0</h1>
+	<h1>Final Project 1.5.0</h1>
 	
+	<h1> Vegetation Vitality in Response to
+		 Fracking and its Waste-water.
+	</h1>
+	
+	<h2>This research aims to answer the question will plants serve as a decent proxy for 
+		ground, and water-table pollution? Fracking waste waters contain chemicals not 
+		suitable for human consumption. These waste-waters are both stored above ground (poorly) and 
+		are injected into ground with the drill.
+	</h2>
+	
+	<h2>This study ranges from June 2011 to June 2015 to capture plants in "full leaf", or at their greenest.
+		Below are NDVI, or Normalized Difference Vegetation Index, for 2 time periods.
+		NDVI Calculation is ((NIR-Red)/(NIR+Red)). This calculation is used to create an NDVI image.
+		The images displayed have a bit more math. NDVI on their own aren't as useful, so each image is now the difference,
+		or change, in plant vitality between the two time periods.
+		By convention, the healthiest plants will have the richest red, while areas void of plant life will be a vibrant green.
+	</h2>
+	
+	<h2>The wells on the maps are marked and are contained within two buffer zones.
+		The first buffer zone is a 100m radius around the well. Data within this circle should not be used
+		in analysis. This buffer exists to eliminate the effects of construction and direct human interference.
+		The second buffer, a 1km radius, is used to approximate the extent of any horizontal drilling.
+		So the area of interest lies between both buffer zones. It is there that changes to plant health will be significant.
+	</h2>
+	
+	<h2>MAP LEGEND (applicable to both maps)
+			Red: Healthy
+			Green: Unhealthy or Void
+			Purple Dot: Location of a Well
+			Red Circle: 100 Meter Buffer Zone
+			Blue Circle: 1 Kilometer Buffer Zone
+			
 	<h1>NDVI from 2011 to 2013</h1>
 
 	<div id="FinalMap" class="map"><!-- This is where the map will be displayed --></div>
@@ -17,8 +49,20 @@
 	<h1>NDVI from 2011 to 2015</h1>
 	
 	<div id="FinalMap2" class="map"><!-- This is where the map will be displayed --></div>
-	
-	
+		
+	<h2>The data is somewhat skewed in the year 2015 as the region experienced double the annual rainfall
+		from the previous years in this study.
+		Unfortunately the year 2014 could not be used as LandSat 5 passed over during a severe thunderstorm 
+		and only captured cloud cover. LandSat 7 had monumental sensor failure and the data was unusable.
+		LandSat 8 had not acquired data of the area in 2014.
+	</h2>
+		
+	<h2>Data courtesy of:
+			USGS for their LandSat images.
+			Oklahoma Geological Survey at University of Oklahoma for Well data.
+			ESRI for their student trial of the ArcMap Software for which this would have
+			otherwise been impossible.
+	</h2>
 
 	<!--<script type="text/javascript" src="js/OpenLayer1.2.js"></script>-->
 	<script type="text/javascript">
