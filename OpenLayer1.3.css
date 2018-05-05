@@ -3,6 +3,9 @@ body {
  width:90%;
  height:80%
  }
+body {
+ background-color: #b3b3b3;
+}
 
 #map  {
  height:400px;
