@@ -8,10 +8,10 @@
 </head>
 
 <body>
-	<h1>Final Project 1.5.2</h1>
+	<h1>Final Exam 1.0.0</h1>
 	
 			
-	<h1>NDVI from 2011 to 2013</h1>
+	<h1>Unstyled</h1>
 
 	<div id="FinalMap" class="map"><!-- This is where the map will be displayed --></div>
 	
@@ -26,55 +26,55 @@
 	
 	var projection = ol.proj.get('EPSG:3857')
 	
-	var MeterBuff = new ol.layer.Tile({
+	var Shape1 = new ol.layer.Tile({
 		source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
 			params: {
-				LAYERS: 'ws_dbality:Well_buffer_100m',
+				LAYERS: 'ws_dbality:Shape_1',
 				FORMAT: 'image/png',
 				TRANSPARENT: true
 				},
 			})
 		})
 		
-	var KiloBuff = new ol.layer.Tile({
+	var Shape2 = new ol.layer.Tile({
 		source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
 			params: {
-				LAYERS: 'ws_dbality:Well_buffer_1km',
+				LAYERS: 'ws_dbality:Shape_2',
 				FORMAT: 'image/png',
 				TRANSPARENT: true
 				},
 			})
 		})	
 
-	var Well_Loc = new ol.layer.Tile({
+	var Shape3 = new ol.layer.Tile({
 		source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
 			params: {
-				LAYERS: 'ws_dbality:Well_Log_2011',
+				LAYERS: 'ws_dbality:Shape_3',
 				FORMAT: 'image/png',
 				TRANSPARENT: true
 				},
 			})
 		})
 	
-	var five = new ol.layer.Tile({
+	var TIF1 = new ol.layer.Tile({
 		source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
 			params: {
-				LAYERS: 'ws_dbality:2011-2015',
+				LAYERS: 'ws_dbality:Tif_1',
 				FORMAT: 'image/png',
 				TRANSPARENT: true
 				},
 			})
 		})
 		
-	var three = new ol.layer.Tile({
+	var TIF2 = new ol.layer.Tile({
 		source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
 			params: {
-				LAYERS: 'ws_dbality:2011-2013',
+				LAYERS: 'ws_dbality:Tif_2',
 				FORMAT: 'image/png',
 				TRANSPARENT: true
 				},
@@ -83,7 +83,7 @@
 	
 	var Map1 = new ol.Map({
 		target: 'FinalMap',
-		layers: [three,MeterBuff, KiloBuff, Well_Loc],
+		layers: [Shape1,Shape2, Shape3, TIF1, TIF2],
 		view: new ol.View({
 			center: ol.proj.fromLonLat([-97.0584, 36.1156]), 
 			zoom: 11,
