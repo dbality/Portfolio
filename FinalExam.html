@@ -8,14 +8,16 @@
 </head>
 
 <body>
-	<h1>Final Exam 1.1.0</h1>
+	<h1>Final Exam 1.2.0</h1>
 	
 			
-	<h1>Unstyled</h1>
+	<h1>Given Default Styles</h1>
+	<h1>Question 6</h1>
 
 	<div id="FinalMap" class="map"><!-- This is where the map will be displayed --></div>
 	
-	<h1>NDVI from 2011 to 2015</h1>
+	<h1>Custom Styling</h1>
+	<h1>Question 7</h1>
 	
 	<div id="FinalMap2" class="map"><!-- This is where the map will be displayed --></div>
 		
@@ -85,8 +87,8 @@
 		target: 'FinalMap',
 		layers: [TIF1, TIF2, Shape2, Shape3, Shape1],
 		view: new ol.View({
-			center: ol.proj.fromLonLat([-97.0584, 36.1156]), 
-			zoom: 11,
+			center: ol.proj.fromLonLat([-106.6198, 35.0843]), //35.0843° N, 106.6198° W
+			zoom: 16,
 			projection: projection,
 			})
 		})
@@ -95,8 +97,8 @@
 		target: 'FinalMap2',
 		layers: [five, MeterBuff, KiloBuff, Well_Loc],
 		view: new ol.View({
-			center: ol.proj.fromLonLat([-97.0584, 36.1156]), 
-			zoom: 11,
+			center: ol.proj.fromLonLat([-106.6198, 35.0843]), 
+			zoom: 16,
 			projection: projection,
 			})
 		})
