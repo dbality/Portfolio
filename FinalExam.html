@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Final Exam 1.2.3</h1>
+	<h1>Final Exam 1.4</h1>
 	
 			
 	<h1>Given Default Styles</h1>
@@ -61,6 +61,17 @@
 			})
 		})
 	
+	var STYShape3 = new ol.layer.Tile({
+		source: new ol.source.TileWMS({
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
+			params: {
+				LAYERS: 'ws_dbality:Streets_Styled',
+				FORMAT: 'image/png',
+				TRANSPARENT: true
+				},
+			})
+		})
+	
 	var TIF1 = new ol.layer.Tile({
 		source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
@@ -72,11 +83,33 @@
 			})
 		})
 		
+	var STYTIF1 = new ol.layer.Tile({
+		source: new ol.source.TileWMS({
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
+			params: {
+				LAYERS: 'ws_dbality:Tif_1',
+				FORMAT: 'image/png',
+				TRANSPARENT: true
+				},
+			})
+		})
+		
+	var STYTIF2 = new ol.layer.Tile({
+		source: new ol.source.TileWMS({
+		url: 'http://internetmapping.net:8080/geoserver/wms?',
+			params: {
+				LAYERS: 'ws_dbality:Styled_Tif_1',
+				FORMAT: 'image/png',
+				TRANSPARENT: true
+				},
+			})
+		})
+	
 	var TIF2 = new ol.layer.Tile({
 		source: new ol.source.TileWMS({
 		url: 'http://internetmapping.net:8080/geoserver/wms?',
 			params: {
-				LAYERS: 'ws_dbality:Tif_2',
+				LAYERS: 'ws_dbality:Styled_Tif_2',
 				FORMAT: 'image/png',
 				TRANSPARENT: true
 				},
@@ -95,7 +128,7 @@
 		
 	var Map2 = new ol.Map({
 		target: 'FinalMap2',
-		layers: [TIF1, TIF2, Shape2, Shape3, Shape1],
+		layers: [STYTIF1, STYTIF2, Shape2, STYShape3, Shape1],
 		view: new ol.View({
 			center: ol.proj.fromLonLat([-106.6198, 35.0843]), 
 			zoom: 15,
